@@ -1,0 +1,248 @@
+body {
+    display: grid;
+    place-items: center;
+    margin: 0;
+    min-height: 100vh;
+    background-color: #f4f4f9;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    scrollbar-color: #006e8e #f4f4f9;
+}
+
+/* Form Styling*/
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.settings {
+    display: flex;
+    flex-direction: column;
+}
+
+.setting-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 10px;
+    padding: 3px;
+}
+
+textarea {
+  resize: none;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+}
+
+.wrapper {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 30px;
+    width: 50vw;
+    max-width: 1200px;
+    min-width: 300px;
+    box-shadow: 10px 10px 15px -3px rgba(0,0,0,0.1);
+}
+
+.submit-btn {
+    background-color: #006e8e;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    width: 40%;
+    align-self: center;
+}
+
+.submit-btn:hover {
+    background-color: #00a1d1;
+}
+
+/* Tab Navigation*/
+.tab-header {
+    display: flex;
+    padding: 2px;
+    border-bottom: 3px solid #006e8e;
+    border-radius: 5px;
+}
+
+.tab-btn {
+    background-color: transparent;
+    border-radius: 5px;
+    color: black;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    margin: 3px;
+    align-self: center;
+}
+
+.tab-btn:hover {
+    background-color: #00a1d1;
+    color: white;
+}
+
+.tab-btn.active {
+    background-color: #006e8e;
+    color: white;
+}
+
+.tab-content {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.tab-content.active {
+    display: flex;
+}
+
+/* Input Fields */
+textarea,
+input[type="text"],
+input[type="file"] {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="checkbox"] {
+    box-sizing: border-box;
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+    transform: scale(1.5);
+}
+
+input[type="number"] {
+    box-sizing: border-box;
+    padding: 3px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+    width: 20%;
+}
+
+input[type="number"]:focus {
+    outline: none;
+    border-color: #006e8e;
+    box-shadow: 0 0 0 2px rgba(0, 110, 142, 0.2);
+}
+
+
+textarea:focus,
+input[type="text"]:focus {
+    outline: none;
+    border-color: #006e8e;
+    box-shadow: 0 0 0 2px rgba(0, 110, 142, 0.2);
+}
+
+/* Enzyme Table*/
+.wrapper#enzymes {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 30px;
+    width: 50vw;
+    height: 60vh;
+    box-shadow: 10px 10px 15px -3px rgba(0,0,0,0.1);
+}
+
+.table-container {
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    background-color: #ffffff;
+    margin: 20px;
+}
+
+.enzyme-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.enzyme-table th,
+.enzyme-table td {
+    padding: 12px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.enzyme-table th {
+    background-color: #f4f4f9;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.1);
+}
+
+.enzyme-table tbody tr:hover {
+    background-color: #f9f9f9;
+}
+
+.enzyme-table input[type="checkbox"] {
+    margin: 0;
+    cursor: pointer;
+}
+
+.enzyme-table label {
+    cursor: pointer;
+}
+
+#enzymeSearch {
+    margin-bottom: 10px;
+}
+
+/* Map */
+.wrapper#map {
+    width: 80vw;
+    max-width: 1200px;
+}
+
+.download-btn {
+    background-color: #006e8e;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    width: auto;
+    align-self: end;
+}
+
+.reset-btn {
+    background-color: #8B0000FF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    width: auto;
+    align-self: end;
+}
+
+.reset-btn:hover {
+    background-color: #cc0000;
+}
+
+/* Responsiveness for small screens */
+@media (max-width: 768px) {
+    .wrapper,
+    .wrapper#enzymes,
+    .wrapper#map {
+        width: 90%;
+        max-width: 90%;
+        min-width: 0;
+        height: auto;
+        padding: 20px;
+    }
+}

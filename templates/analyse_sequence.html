@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Enzyme Map</title>
+    <link rel="stylesheet" href="/static/styles/style.css">
+</head>
+<body>
+    <div class="wrapper" id="enzymes">
+        <form action="/map_sequence" method="POST">
+
+            <div class="settings">
+                <h3>Select Enzymes to Map</h3>
+                <input type="text" id="enzymeSearch" placeholder="Search for an enzyme (e.g., EcoRI)..." autocomplete="off">
+
+                <div class="table-container">
+                    <table class="enzyme-table">
+                        <thead>
+                            <tr>
+                                <th>Select</th>
+                                <th>Enzyme Name</th>
+                                <th>Cut Site</th>
+                                <th>Cuts</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for enzyme in enzymes %}
+                            <tr>
+                                <td>
+                                    <input type="checkbox" id="{{ enzyme.name }}" name="selected_enzymes" value="{{ enzyme.name }}">
+                                </td>
+                                <td>
+                                    <label for="{{ enzyme.name }}"><strong>{{ enzyme.name }}</strong></label>
+                                </td>
+                                <td>{{ enzyme.site }}</td>
+                                <td>{{ enzyme.cuts }}x</td>
+                            </tr>
+                            {% endfor %}
+                            </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <input type="hidden" name="seq" value="{{ sequence }}">
+            <input type="hidden" name="circular" value="{{ True if circular else False }}">
+            <button type="submit" class="submit-btn">Map Sequence</button>
+        </form>
+
+        <form action="/" method="GET">
+            <button type="submit" class="reset-btn">Go back</button>
+        </form>
+    </div>
+<script src="/static/js/main.js"></script>
+</body>
+</html>
