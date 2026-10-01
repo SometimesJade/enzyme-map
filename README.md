@@ -16,7 +16,7 @@
   
   * **Circular Map View**
 
-  <img src="common/circular.png" alt="Circular View" width="300"/>
+  <img src="common/circular_gif.gif" alt="Circular View" width="300"/>
 
 ## Tech Stack
 
