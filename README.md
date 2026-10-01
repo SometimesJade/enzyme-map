@@ -90,6 +90,6 @@ python app.py
 ```
 
 
-2. Open your web browser and navigate to: `[http://127.0.0.1:5000](http://127.0.0.1:5000)`
+2. Open your web browser and navigate to: [http://127.0.0.1:5000](http://127.0.0.1:5000)
 3. Paste your target DNA sequence into the input field, select your desired restriction enzymes, and click **Submit** to generate your map.
 
