@@ -10,9 +10,12 @@
 * **Comprehensive Enzyme Library:** Search your sequence against a broad database of common restriction endonucleases.
 * **Visual Mapping:** Clear, user-friendly visualization of exact cut site locations and resulting fragment sizes.
 * **Lightweight & Fast:** Built on Flask, ensuring quick processing and easy local deployment.
-  *  **Linear View**
+  *  **Linear Map View**
+  
   <img src="common/linear.png" alt="Linear View" width="400"/>
-  * **Circular View**
+  
+  * **Circular Map View**
+
   <img src="common/circular.png" alt="Circular View" width="300"/>
 
 ## Tech Stack
